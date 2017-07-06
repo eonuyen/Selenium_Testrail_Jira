@@ -1,7 +1,6 @@
-package EFT_SELENIUM.Tests.JetonWallet;
+package Tests;
 
-import EFT_SELENIUM.ConfigReaders.JetonWalletConfig;
-import EFT_SELENIUM.Tests.JetonWallet.Page.WebLoginPage;
+import Tests.Page.WebLoginPage;
 import main.framework.ParentFunctionWeb;
 import main.helpers.Helper;
 import main.helpers.ScreenshotTaker;
@@ -30,14 +29,14 @@ public class WebLoginTest extends ParentFunctionWeb {
 
     {
 
-        openBrowser(conf.getJetonWalletUrl());
+        openBrowser();
 
     }
 
     @BeforeMethod
     public void beforeMethod() throws Exception {
 
-        clearCookiesAndGoHomePage(conf.getJetonWalletUrl());
+        clearCookiesAndGoHomePage();
 
     }
 
