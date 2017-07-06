@@ -48,11 +48,7 @@ public class LoginTest extends ParentFunctionWeb {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.
                 clickLogin().
-                doLogin(
-                        conf.getOzanWalletWebUserName(),
-                        conf.getOzanWalletWebUserPassword(),
-                        conf.getOzanWalletCountryCode()
-                );
+                doLogin();
 
         Helper.clickObjectById("panel-content",driver);
 
