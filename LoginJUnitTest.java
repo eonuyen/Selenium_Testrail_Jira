@@ -2,7 +2,6 @@ package selenium.tests;
 
 import org.junit.*;
 import org.openqa.selenium.By;
-import selenium.configReaders.*;
 import selenium.framework.ParentFunctionWeb;
 import selenium.helpers.Helper;
 import selenium.tests.pages.LoginPage;
