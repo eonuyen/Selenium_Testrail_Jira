@@ -25,8 +25,8 @@ public class TestRail {
     public TestRail() {
         testResultData.put("assignedto_id", "2");
 
-        client = new APIClient("https://eftsoftware.testrail.com/");
-        client.setUser("automation@eftsoftware.com");
+        client = new APIClient("https://company.testrail.com/");
+        client.setUser("automation@company.com");
         client.setPassword("smJwD5DUWLPB29U*");
 
     }
@@ -60,9 +60,9 @@ public class TestRail {
 
             HttpClient httpClient = HttpClientBuilder.create().build();
 
-            HttpPost postRequest = new HttpPost("https://fremit.atlassian.net/rest/api/2/issue/" + jiraTaskId + "/attachments");
+            HttpPost postRequest = new HttpPost("https://domain/rest/api/2/issue/" + jiraTaskId + "/attachments");
             BASE64Encoder base = new BASE64Encoder();
-            String encoding = base.encode("onur.yenici:Otomasyon1928!".getBytes());
+            String encoding = base.encode("name:Autoomasyon1928!".getBytes());
             postRequest.setHeader("Authorization", "Basic " + encoding);
             postRequest.setHeader("X-Atlassian-Token", "nocheck");
             MultipartEntityBuilder entity = MultipartEntityBuilder.create();
