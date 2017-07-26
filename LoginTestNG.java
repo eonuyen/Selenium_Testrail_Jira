@@ -43,10 +43,20 @@ public class WebLoginTest extends ParentFunctionWeb {
     @AfterMethod
     public void afterMethod(ITestResult result) throws Exception {
 
+        TestRail apiCall=new TestRail();
+        String[] caseIds=result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Test.class).testName().split(",");
+
         if (ITestResult.FAILURE == result.getStatus()) {
             String resultName = result.getName();
             new ScreenshotTaker(driver).takeScreenShot(resultName);
+            apiCall.setCaseResult(caseIds,testrailRun,true);
+            apiCall.setJira(new ScreenshotTaker(driver).takeScreenShot(resultName),caseIds);
+
         }
+        else
+            apiCall.setCaseResult(caseIds,testrailRun,false);
+     }
+
         try{
             Helper.SearchAndFindElement(By.className("js-error-out"),driver).findElements(By.tagName("Button")).get(0).click();
 
