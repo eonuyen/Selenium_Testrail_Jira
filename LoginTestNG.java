@@ -56,7 +56,7 @@ public class WebLoginTest extends ParentFunctionWeb {
 
     }
 
-    @Test
+    @Test(testName = "C3103")
     public void successfullyLoginTest() throws Exception {
 
         WebLoginPage loginPage = new WebLoginPage(driver);
