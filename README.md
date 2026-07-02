@@ -1,0 +1,1 @@
+This project is a sample to demo how to integrate test cases in the TestRail environment along with Selenium automation test scenarios and JIRA bugs. In every test run, test cases are updated in Testrail and JIRA as matched in the implementation.
