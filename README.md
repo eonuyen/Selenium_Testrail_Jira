@@ -1,1 +1,2 @@
+Legacy QA automation case study originally created in 2018. Kept public to show earlier experience with Selenium, Cucumber, TestRail and Jira integrations in https://swtestacademy.com/selenium-testrail-jira-integration/
 This project is a sample to demo how to integrate test cases in the TestRail environment along with Selenium automation test scenarios and JIRA bugs. In every test run, test cases are updated in Testrail and JIRA as matched in the implementation.
