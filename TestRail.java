@@ -60,9 +60,9 @@ public class TestRail {
 
             HttpClient httpClient = HttpClientBuilder.create().build();
 
-            HttpPost postRequest = new HttpPost("https://domain/rest/api/2/issue/" + jiraTaskId + "/attachments");
+            HttpPost postRequest = new HttpPost(System.getenv("JIRA_BASE_URL") + jiraTaskId + "/attachments");
             BASE64Encoder base = new BASE64Encoder();
-            String encoding = base.encode("name:Autoomasyon1928!".getBytes());
+            String encoding = base.encode(System.getenv("JIRA_TOKEN").getBytes());
             postRequest.setHeader("Authorization", "Basic " + encoding);
             postRequest.setHeader("X-Atlassian-Token", "nocheck");
             MultipartEntityBuilder entity = MultipartEntityBuilder.create();
