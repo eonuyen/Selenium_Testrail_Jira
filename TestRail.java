@@ -25,9 +25,9 @@ public class TestRail {
     public TestRail() {
         testResultData.put("assignedto_id", "2");
 
-        client = new APIClient("https://company.testrail.com/");
-        client.setUser("automation@company.com");
-        client.setPassword("smJwD5DUWLPB29U*");
+        client = new APIClient(System.getenv("TESTRAIL_URL"));
+        client.setUser(System.getenv("TESTRAIL_USER"));
+        client.setPassword(System.getenv("TESTRAIL_PASSWORD"));
 
     }
 
